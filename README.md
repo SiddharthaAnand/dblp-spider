@@ -39,4 +39,7 @@ This is the sample data that you might get after the crawl is over.
 # Authors
 
 # Future enhancements
-
+* Add a no-sql db to insert data 
+* Deploy the spider on a server for large scale crawl
+* Extract more data from dblp
+* Visualize the data using a visualization tool
