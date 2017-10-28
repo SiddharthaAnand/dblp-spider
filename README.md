@@ -16,7 +16,7 @@ generated when you run the command is in json format.
 
 ## What does the spider do?
 The code here, crawls the website of dblp, collects coauthors name list, their communities
-to which they belong, articles that they have published together. You can modify it extract
+to which they belong, articles that they have published together. You can modify it and extract
 even more information from the web page.
 
 ## How to clone the repository
@@ -91,7 +91,7 @@ contents of the json file. You can google it to know how to use it.
 * [Siddhartha Anand](https://github.com/SiddharthaAnand)
 
 ## Licence
-This project is licenced under Apache Licence - see the [LICENSE.md](/LICENSE.md) for more details.
+This project is licensed under Apache Licence - see the [LICENSE.md](/LICENSE.md) for more details.
 ## Future enhancements
 * Add a no-sql db to insert data 
 * Deploy the spider on a server for large scale crawl
