@@ -3,4 +3,6 @@
 # data file
 dblp_data*.jl
 # pycharm files
-./idea/*
+./idea/*.xml
+./idea/*.iml
+.idea/
