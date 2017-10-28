@@ -27,7 +27,25 @@ Simply, run the following command:
 This will clone this repository to your local system. 
 
 ## How to run the code
-Make sure you are in the directory of dblp-spider. Run the following command:
+Make sure you are in the working directory of dblp-spider. The working directory looks like this:
+```
+>>> tree
+|-- coauthornetwork
+|   |-- __init__.py
+|   |-- items.py
+|   |-- middlewares.py
+|   |-- pipelines.py
+|   |-- settings.py
+|   `-- spiders
+|       |-- example.py
+|       `-- __init__.py
+|-- dblp_data1.jl
+|-- dblp_data.jl
+|-- LICENSE.md
+|-- README.md
+`-- scrapy.cfg
+```
+Run the following command:
 ```
 >>> scrapy crawl dblpspider [-o] [filename]
 ```
