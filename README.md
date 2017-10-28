@@ -1,5 +1,5 @@
 # dblp-spider
- Collection of co-authorship network from http://dblp.uni-trier.de/. The site stores\\
+ Collection of co-authorship network from http://dblp.uni-trier.de/. The site stores
  information about the author who have worked together on a research topic. You can
  visit the website and check it out for more information about the kind of information
  that is represented there.
