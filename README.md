@@ -60,6 +60,8 @@ For example:
 
 ### Sample json data
 This is the sample data that you might get after the crawl is over.
+You can optionally use the in-built json package to pretty print the
+contents of the json file. You can google it to know how to use it.
 ```
 >>> head dblp_json.jl
 {
