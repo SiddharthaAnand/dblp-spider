@@ -21,9 +21,15 @@ This will clone this repository to your local system.
 # How to run the code
 Make sure you are in the directory of dblp-spider. Run the following command:
 ```
+>>> scrapy crawl dblpspider [-o] [filename]
+```
+
+This will start the spider, send requests asynchronously and receive data and store the output (denoted by '-o' in the filename given by you.
+
+For example:
+```
 >>> scrapy crawl dblpspider -o dblp_data.jl
 ```
-This will start the spider, send requests asynchronously and receive data and store it in dblp_data.jl.
 
 # Sample json data
 This is the sample data that you might get after the crawl is over.
@@ -35,8 +41,9 @@ This is the sample data that you might get after the crawl is over.
 ...
 ```
 
-
 # Authors
+* [Khusbu Mishra](https://github.com/Khusbu)
+* [Siddhartha Anand](https://github.com/SiddharthaAnand)
 
 # Future enhancements
 * Add a no-sql db to insert data 
