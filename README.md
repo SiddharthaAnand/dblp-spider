@@ -1,8 +1,8 @@
 # dblp-spider
  Collection of co-authorship network from http://dblp.uni-trier.de/. The site stores
  information about the author who have worked together on a research topic. You can
- visit the website and check it out for more information about the kind of information
- that is represented there.
+ visit the website and check it out for more information about the kind of data
+ that is present there.
 
 # Example of a co-authorship network
 ```
@@ -10,9 +10,14 @@
 "Siddhartha Anand" "Khusbu Mishra"
 ...
 ```
-The above example denotes an edge-list (author_one->author_two). Such an edge-list denotes a graph of co-authors who have worked on a paper together. The file being generated when you run the command is in json format.
+The above example denotes an edge-list (author_one->author_two). Such an edge-list
+denotes a graph of co-authors who have worked on a paper together. The file being
+generated when you run the command is in json format.
+
 # What does this code do ?
-The code here, crawls the website of dblp, collects coauthors name list, their communities to which they belong, articles that they have published together. You can modify it extract even more information from the web page.
+The code here, crawls the website of dblp, collects coauthors name list, their communities
+to which they belong, articles that they have published together. You can modify it extract
+even more information from the web page.
 
 # How to clone the repository
 Simply, run the following command:
@@ -27,7 +32,8 @@ Make sure you are in the directory of dblp-spider. Run the following command:
 >>> scrapy crawl dblpspider [-o] [filename]
 ```
 
-This will start the spider, send requests asynchronously and receive data and store the output (denoted by '-o' in the filename given by you.
+This will start the spider, send requests asynchronously and receive data and store the
+output (denoted by '-o' in the filename given by you.
 
 For example:
 ```
