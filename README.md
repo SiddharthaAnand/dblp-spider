@@ -91,7 +91,7 @@ contents of the json file. You can google it to know how to use it.
 * [Siddhartha Anand](https://github.com/SiddharthaAnand)
 
 ## Licence
-This project is licenced under Apache Licence - see the [LICENCE.md](/LICENCE.md) for more details.
+This project is licenced under Apache Licence - see the [LICENSE.md](/LICENSE.md) for more details.
 ## Future enhancements
 * Add a no-sql db to insert data 
 * Deploy the spider on a server for large scale crawl
