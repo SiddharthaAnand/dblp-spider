@@ -90,6 +90,8 @@ contents of the json file. You can google it to know how to use it.
 * [Khusbu Mishra](https://github.com/Khusbu)
 * [Siddhartha Anand](https://github.com/SiddharthaAnand)
 
+## Licence
+This project is licenced under Apache Licence - see the [LICENCE.md](/LICENCE.md) for more details.
 ## Future enhancements
 * Add a no-sql db to insert data 
 * Deploy the spider on a server for large scale crawl
