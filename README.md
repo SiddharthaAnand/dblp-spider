@@ -1,8 +1,7 @@
 # dblp-spider
- Collection of co-authorship network from http://dblp.uni-trier.de/. The site stores
- information about the author who have worked together on a research topic. You can
- visit the website and check it out for more information about the kind of data
- that is present there.
+
+A spider written using [scrapy](https://scrapy.org/) that crawls [dblp](http://dblp.uni-trier.de/) website to extract various data about the authors like his coauthor names, communities
+to which he belong, articles that he has published. It is then used to build a co-authorship network graph.  
 
 ### Example of a co-authorship network
 ```
@@ -11,59 +10,40 @@
 ...
 ```
 The above example denotes an edge-list (author_one->author_two). Such an edge-list
-denotes a graph of co-authors who have worked on a paper together. The file being
-generated when you run the command is in json format.
+denotes a graph of co-authors who have worked on a paper together.
 
-## What does the spider do?
-The code here, crawls the website of dblp, collects coauthors name list, their communities
-to which they belong, articles that they have published together. You can modify it and extract
-even more information from the web page.
+## Dependencies
+
+- [scrapy](https://doc.scrapy.org/en/latest/intro/install.html)
+- [python 2.7](https://www.python.org/)
 
 ## How to clone the repository
 Simply, run the following command:
 ```
->>> git clone https://github.com/SiddharthaAnand/dblp-spider.git
+$ git clone https://github.com/SiddharthaAnand/dblp-spider.git
 ```
-This will clone this repository to your local system. 
+This will clone this repository to your local system.
 
 ## How to run the code
-Make sure you are in the working directory of dblp-spider. The working directory looks like this:
+Make sure you are in the working directory of dblp-spider. Then run the following command:
 ```
->>> tree
-|-- coauthornetwork
-|   |-- __init__.py
-|   |-- items.py
-|   |-- middlewares.py
-|   |-- pipelines.py
-|   |-- settings.py
-|   `-- spiders
-|       |-- example.py
-|       `-- __init__.py
-|-- dblp_data1.jl
-|-- dblp_data.jl
-|-- LICENSE.md
-|-- README.md
-`-- scrapy.cfg
-```
-Run the following command:
-```
->>> scrapy crawl dblpspider [-o] [filename]
+$ scrapy crawl dblpspider [-o] [filename]
 ```
 
 This will start the spider, send requests asynchronously and receive data and store the
-output (denoted by '-o' in the filename given by you.
+output (denoted by '-o' in the filename given by you).
 
 For example:
 ```
->>> scrapy crawl dblpspider -o dblp_data.jl
+$ scrapy crawl dblpspider -o dblp_data.jl
 ```
 
 ### Sample json data
 This is the sample data that you might get after the crawl is over.
-You can optionally use the in-built json package to pretty print the
-contents of the json file. You can google it to know how to use it.
+You can optionally use the [in-built json package](https://docs.python.org/2/library/json.html) to pretty print the
+contents of the json file.
 ```
->>> head dblp_json.jl
+$ head dblp_json.jl
 {
     "author_articles_published": [
         "Spanning tree-based fast community detection methods in social networks."
@@ -86,14 +66,15 @@ contents of the json file. You can google it to know how to use it.
 }
 ...
 ```
-## Authors
-* [Khusbu Mishra](https://github.com/Khusbu)
-* [Siddhartha Anand](https://github.com/SiddharthaAnand)
 
 ## Licence
 This project is licensed under Apache Licence - see the [LICENSE.md](/LICENSE.md) for more details.
+
 ## Future enhancements
-* Add a no-sql db to insert data 
+* Add a no-sql db to insert data
 * Deploy the spider on a server for large scale crawl
 * Extract more data from dblp
 * Visualize the data using a visualization tool
+
+## Contributions
+Any kind of contribution or suggestion are always welcome. You can modify it and extract even more data from [dblp](http://dblp.uni-trier.de/).

@@ -1,7 +1,7 @@
 # pyc files
 *.pyc
 # data file
-dblp_data*.jl
+*.jl
 # pycharm files
 idea/*.xml
 idea/*.iml
