@@ -9,16 +9,6 @@ class ExampleSpider(scrapy.Spider):
 
     def parse(self, response):
 
-        # parse_content(self, response)
-        coauthor_index_content = response.xpath("//div/a[contains(@href, 'http://dblp.uni-trier.de/pers/hd/')]")
-
-        coauthor_url_list = [url.encode("utf-8") for url in coauthor_index_content.xpath("@href").extract()]
-
-        for url in coauthor_url_list:
-            print "Sending request to .....", url
-            yield scrapy.Request(response.urljoin(url), callback=self.parse_content)
-
-    def parse_content(self, response):
         # This takes out the Coauthor index part from the html page and returns a SelectorList
         # Collect all a tag elements under div whose attribute href contains the said string.
         coauthor_index_content = response.xpath("//div/a[contains(@href, 'http://dblp.uni-trier.de/pers/hd/')]")
@@ -52,6 +42,4 @@ class ExampleSpider(scrapy.Spider):
 
         for url in coauthor_url_list:
             print "Sending request to .....", url
-            yield scrapy.Request(response.urljoin(url), callback=self.parse_content)
-
-
+            yield scrapy.Request(response.urljoin(url), callback=self.parse)
