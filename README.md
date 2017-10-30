@@ -1,7 +1,8 @@
 # dblp-spider
 
-A spider written using [scrapy](https://scrapy.org/) that crawls [dblp](http://dblp.uni-trier.de/) website to extract various data about the authors like his coauthor names, communities
-to which he belong, articles that he has published. It is then used to build a co-authorship network graph.  
+A spider written using [scrapy](https://scrapy.org/) that crawls [dblp](http://dblp.uni-trier.de/) website to
+extract various data about the authors like his/her co-authors' names, communities to which he/she belongs to and
+articles that he/she has published. It is then used to build a co-authorship network graph.
 
 ### Example of a co-authorship network
 ```
