@@ -34,7 +34,11 @@ $ scrapy crawl dblpspider [-o] [filename]
 This will start the spider, send requests asynchronously and receive data and store the
 output (denoted by '-o' in the filename given by you).
 
-For example:
+You can store the extracted data in different file formats, all thanks to scrapy's in-built
+capacity to do it. You can store file in .csv format, .json format and .jl format. You can read
+about .jl format and how is it better than .json format over google.
+
+I have used .jl just as an example:
 ```
 $ scrapy crawl dblpspider -o dblp_data.jl
 ```
