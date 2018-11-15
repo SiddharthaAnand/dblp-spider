@@ -11,7 +11,7 @@ class ExampleSpider(scrapy.Spider):
 
         # This takes out the Coauthor index part from the html page and returns a SelectorList
         # Collect all a tag elements under div whose attribute href contains the said string.
-        coauthor_index_content = response.xpath("//div/a[contains(@href, 'http://dblp.uni-trier.de/pers/hd/')]")
+        coauthor_index_content = response.xpath("//div[@class='person']/a")
         # Collect all img elements whose title contains show coauthor community
         coauthor_communities_content = response.xpath("//img[contains(@title, 'show coauthor community')]")
         # Iterate over the scrapy.selector.unified.SelectorList type variable coauthor_index_content
