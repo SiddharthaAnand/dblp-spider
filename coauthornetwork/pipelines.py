@@ -18,6 +18,7 @@ class CoauthorNetworkPipeline(object):
         self.mongo_db = mongo_db
         self.db = None
         self.client = None
+        self.items = []
 
     @classmethod
     def from_crawler(cls, crawler):
@@ -33,10 +34,18 @@ class CoauthorNetworkPipeline(object):
 
     def process_item(self, item, spider):
         try:
-            self.db[self.collection_name].insert_one(dict(item))
+            self.items.append(item)
+            if len(self.items) % 10 == 0:
+                print "length: ", len(self.items)
+                self.db[self.collection_name].insert_many(self.items)
+                print "-----------------------BULK INSERT COMPLETE--------------------"
+                self.items = []
+            else:
+                print "False condition"
             return item
         except Exception:
             raise DropItem()
 
     def close_spider(self, item, spider):
         self.client.close()
+
