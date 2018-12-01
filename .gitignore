@@ -1,3 +1,5 @@
+# ignore credential file
+credentials
 # ignore virtual env
 venv/
 # pyc files
