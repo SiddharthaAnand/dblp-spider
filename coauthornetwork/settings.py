@@ -88,3 +88,7 @@ ITEM_PIPELINES = {
 #HTTPCACHE_DIR = 'httpcache'
 #HTTPCACHE_IGNORE_HTTP_CODES = []
 #HTTPCACHE_STORAGE = 'scrapy.extensions.httpcache.FilesystemCacheStorage'
+
+#MONGO CREDENTIALS
+MONGO_URI='mongodb://{username}:{pwd}@cluster0-shard-00-00-kvfhu.mongodb.net:27017,cluster0-shard-00-01-kvfhu.mongodb.net:27017,cluster0-shard-00-02-kvfhu.mongodb.net:27017/test?ssl=true&replicaSet=Cluster0-shard-0&authSource=admin&retryWrites=true'
+MONGO_DATABASE='test'
